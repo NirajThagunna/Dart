@@ -14,7 +14,7 @@ void main() {
     // exception occur
     check(geek_age1);
     check(geek_age2);
-  } catch (e) {
+  } on Age catch (e) {
     // Printing error
     print(e.error());
   }
