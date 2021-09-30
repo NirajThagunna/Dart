@@ -5,9 +5,9 @@ class AmtException implements Exception {
 
 void main(List<String> args) {
   try {
-    withdraw_amt(-1);
-  } catch (e) {
-    print(e.exceptionMsg());
+    withdraw_amt(100);
+  } on AmtException catch (exp) {
+    print(exp.exceptionMsg());
   } finally {
     print("Ending the requested operation......!");
   }
