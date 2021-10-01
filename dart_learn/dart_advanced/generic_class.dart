@@ -1,18 +1,27 @@
+// generic class can be used whenever we have to use the same functionality to many classes then we will use the generic slots
 void main(List<String> args) {
-  var res = University<Student>();
-  res.printInfo();
+  final circleSlot = Slot<Circle>();
+  circleSlot.insert(Circle());
+
+  print(circleSlot.toString());
+
+  final triangleSlot = Slot<Triangle>();
+  triangleSlot.insert(Triangle());
+
+  print(triangleSlot.toString());
 }
 
-class Student {
-  void printInfo() {
-    print("I am from Student!");
-  }
-}
+class Circle {}
 
-class College extends Student {}
+class Rectangle {}
 
-class University<T extends Student> {
-  void info() {
-    print("Okay, done!");
+class Triangle {}
+
+class Slot<T> {
+  insert(T shape) {}
+
+  @override
+  String toString() {
+    return '$T';
   }
 }
