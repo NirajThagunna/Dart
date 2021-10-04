@@ -1,4 +1,4 @@
-void main() {
+Future<void> main() async {
   int a = 25, b = 10;
   print(a ~/ b); // It will return the quotient after dividing the two numbers
 
